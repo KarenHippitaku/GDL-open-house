@@ -1,7 +1,7 @@
-    
-    
+
+
     //.....Lee Asistencia de coleccion estudiantes.....
-    
+
     let tabla=document.getElementById('tablaAsistencia');
     console.log("db", db);
     db.collection("estudiantes").get().then((querySnapshot)=>{
@@ -12,20 +12,20 @@
            <th scope="row">${doc.data().name}</th>
             <td>${doc.data().fecha}</td>
             <td>${doc.data().hora}</td>
-            <td>${doc.data().asistencia}</td>
-            <td>${doc.data().falta}</td>
-            <td>${doc.data().retardo}</td>
-            <td>${doc.data().dropOut}</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
           </tr>`
         });
     });
-    
+
     //.....Edita Asistencia de coleccion estudiantes.....
     function editar (fecha){
-        
+
         var washingtonRef = db.collection("estudents").doc("id");
         let nuevaFecha = new Date ();
-        var asistencia = fecha.push(nuevaFecha);   
+        var asistencia = fecha.push(nuevaFecha);
     // Set the "capital" field of the city 'DC'
     return washingtonRef.update({
         fecha:asistencia
